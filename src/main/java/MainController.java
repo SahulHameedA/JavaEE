@@ -19,9 +19,11 @@ public class MainController implements Controller {
             throws ServletException, IOException {
 
     	String now = (new Date()).toString();
-        logger.info("Returning the Main Bismillah view (now decoupled from the location) @  " + now);
-        
-        return new ModelAndView("bismillah","now",now);
+        logger.info("Returning the Main Login page (now decoupled from the location) @  " + now);
+        logger.info("images are ok in webapp or within an img subfolder in webapp path");
+        logger.info("Trying to center align a form and size the forms width to x px");
+        logger.info("size workd, but not align, trying now with margin: 0 auto");
+        return new ModelAndView("login","now",now);
     }
 
 }
