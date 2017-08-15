@@ -19,9 +19,9 @@ public class MainController implements Controller {
             throws ServletException, IOException {
 
     	String now = (new Date()).toString();
-        logger.info("Returning Main Bismillah view with " + now);
+        logger.info("Returning the Main Bismillah view (now decoupled from the location) @  " + now);
         
-        return new ModelAndView("WEB-INF/jsp/bismillah.jsp","now",now);
+        return new ModelAndView("bismillah","now",now);
     }
 
 }
